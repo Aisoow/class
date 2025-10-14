@@ -1,0 +1,22 @@
+table,
+th,
+td {
+    border-collapse: collapse;
+    border: 2px solid black;
+    font-family: sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+
+}
+
+th.title {
+    background-color: lightblue;
+}
+
+th {
+    background-color: lightyellow;
+}
+
+table {
+    margin: 0 auto;
+}

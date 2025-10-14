@@ -1,0 +1,29 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe 建置 Teacher 專案",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${workspaceFolder}\\Teacher\\main.cpp",
+                "${workspaceFolder}\\Teacher\\Teacher.cpp",
+                "-o",
+                "${workspaceFolder}\\Teacher\\main.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}\\Teacher"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "編譯 Teacher 專案的所有源文件"
+        }
+    ],
+    "version": "2.0.0"
+}

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="鞠本瑄的學習經歷與作品集">
+    <title>鞠本瑄 - 學習經歷</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        body {
+            padding-top: 56px;
+            background-color: #f8f9fa;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../image/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #007bff;
+            margin: 15px auto;
+        }
+
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 20px;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #212529;
+            color: white;
+            padding: 40px 0 20px;
+        }
+
+        .social-icons {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #007bff;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .back-to-top:hover {
+            background-color: #0056b3;
+        }
+
+        .skill-bar {
+            margin-bottom: 15px;
+        }
+
+        .skill-name {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 導航欄 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-journal-code"></i> 鞠本瑄的學習經歷
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <i class="bi bi-house-door"></i> 首頁
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mainpage.html">
+                            <i class="bi bi-bootstrap"></i> Bootstrap
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Resume.html">
+                            <i class="bi bi-file-person"></i> 履歷表
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="task-manager.html">
+                            <i class="bi bi-code-square"></i> 互動軟體
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/Aisoow/113-2_OOP_ETP_G21.git">
+                            <i class="bi bi-github"></i> C++程式
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄區塊 -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4">歡迎來到我的學習歷程</h1>
+            <p class="lead">資工系學生 | 程式開發愛好者 | 持續學習中</p>
+            <a href="Resume.html" class="btn btn-primary btn-lg mt-3">查看我的履歷</a>
+        </div>
+    </section>
+
+    <!-- 關於我 -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">關於我</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="../image/H126223378.JPG" alt="鞠本瑄照片" class="img-fluid rounded shadow" width="300">
+                </div>
+                <div class="col-md-6">
+                    <h3>鞠本瑄</h3>
+                    <p class="lead">資工1A | 學號：B3230924</p>
+                    <p>
+                        我是一名資工系的學生，對程式開發和網頁設計充滿熱情。目前正在學習多種程式語言和技術，
+                        包括C++、HTML、CSS和JavaScript。我喜歡透過實際項目來應用所學知識，並不斷挑戰自己。
+                    </p>
+                    <div class="skill-bar">
+                        <div class="skill-name">HTML & CSS</div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="85"
+                                aria-valuemin="0" aria-valuemax="100">60%</div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-name">JavaScript</div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="70"
+                                aria-valuemin="0" aria-valuemax="100">50%</div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-name">C++</div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="80"
+                                aria-valuemin="0" aria-valuemax="100">50%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 項目展示 -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">我的項目</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <!-- <img src="../image/bootstrap-project.jpg" class="card-img-top" alt="Bootstrap項目"> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Bootstrap網站設計</h5>
+                            <p class="card-text">使用Bootstrap框架設計的響應式網站，展示了框架的各種組件和功能。</p>
+                            <a href="mainpage.html" class="btn btn-primary">查看詳情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <!-- <img src="../image/resume-project.jpg" class="card-img-top" alt="履歷表項目"> -->
+                        <div class="card-body">
+                            <h5 class="card-title">個人履歷表</h5>
+                            <p class="card-text">包含我的教育背景、技能和經驗的詳細履歷表，使用HTML和CSS製作。</p>
+                            <a href="Resume.html" class="btn btn-primary">查看詳情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <!-- <img src="../image/cpp-project.jpg" class="card-img-top" alt="C++項目"> -->
+                        <div class="card-body">
+                            <h5 class="card-title">C++程式開發</h5>
+                            <p class="card-text">使用C++開發的各種應用程式和演算法實現，包括資料結構和物件導向程式設計。</p>
+                            <a href="https://github.com/Aisoow/113-2_OOP_ETP_G21.git" class="btn btn-primary">查看詳情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 頁腳 -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <div class="social-icons">
+                <!-- <a href="#"><i class="bi bi-facebook"></i></a> -->
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="https://github.com/Aisoow/113-2_OOP_ETP_G21.git"><i class="bi bi-github"></i></a>
+                <!-- <a href="#"><i class="bi bi-linkedin"></i></a> -->
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>創作者資訊</h5>
+                    <p>鞠本瑄 | 資工1A | 學號：B3230924</p>
+                    <!-- <p><i class="bi bi-envelope"></i> example@email.com</p> -->
+                </div>
+                <div class="col-md-4">
+                    <h5>關於本站</h5>
+                    <p>此網站展示我的學習經歷與作品集</p>
+                    <p>© 2025 鞠本瑄的個人網站</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>資源連結</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://github.com/Aisoow/113-2_OOP_ETP_G21.git" class="text-white">
+                                <i class="bi bi-github"></i> 我的C++程式</a>
+                        </li>
+                        <li><a href="Resume.html" class="text-white">
+                                <i class="bi bi-file-person"></i> 個人履歷</a>
+                        </li>
+                        <li><a href="task-manager.html" class="text-white">
+                                <i class="bi bi-code-square"></i> 互動軟體作品</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="small">本網站使用 Bootstrap 5 製作 | 所有圖片僅供展示</p>
+        </div>
+    </footer>
+
+    <!-- 回到頂部按鈕 -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 顯示/隱藏回到頂部按鈕
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 300) {
+                $('#backToTop').fadeIn();
+            } else {
+                $('#backToTop').fadeOut();
+            }
+        });
+
+        // 點擊回到頂部
+        $('#backToTop').click(function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, 800);
+            return false;
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安全驗證</title>
+    <link rel="stylesheet" href="css/Captcha.css">
+</head>
+
+<body onload="Captcha()">
+    <div class="captcha-container">
+        <h2>安全驗證</h2>
+        <p>請輸入下方圖片中顯示的數字</p>
+
+        <div class="captcha-images">
+            <img id="random_pic-0" width="50px" alt="驗證碼">
+            <img id="random_pic-1" width="50px" alt="驗證碼">
+            <img id="random_pic-2" width="50px" alt="驗證碼">
+            <img id="random_pic-3" width="50px" alt="驗證碼">
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="txt" placeholder="請輸入驗證碼" autocomplete="off">
+            <button type="button" class="refresh-btn" onclick="resetCaptcha()">
+                重新產生
+            </button>
+        </div>
+
+        <button type="button" onclick="chkcod()">驗證</button>
+    </div>
+
+    <script>
+        let currentNum = ""; // 存儲當前驗證碼
+
+        function Captcha() {
+            resetCaptcha();
+        }
+
+        function resetCaptcha() {
+            // 重設驗證碼
+            currentNum = "";
+            document.getElementById("txt").value = "";
+
+            const picname = [
+                "image/0.png", "image/1.png", "image/2.png", "image/3.png", "image/4.png",
+                "image/5.png", "image/6.png", "image/7.png", "image/8.png", "image/9.png"
+            ];
+
+            for (let i = 0; i < 4; i++) {
+                const which = Math.floor(Math.random() * 10);
+                currentNum += which;
+                document.getElementById("random_pic-" + i).src = picname[which];
+            }
+        }
+
+        function chkcod() {
+            const text = document.getElementById("txt").value;
+            if (text === "") {
+                alert("請輸入驗證碼");
+                return;
+            }
+
+            if (currentNum == text) {
+                alert("驗證成功，即將跳轉頁面");
+                window.location.href = "html/fron_page.html";
+            } else {
+                alert("驗證碼錯誤，請重新輸入");
+                resetCaptcha();
+            }
+        }
+
+        // 監聽Enter鍵
+        document.getElementById("txt").addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                chkcod();
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe 建置 OOP 專案",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${workspaceFolder}\\dock_file\\main.cpp",
+                "${workspaceFolder}\\dock_file\\StuCard.cpp",
+                "-o",
+                "${workspaceFolder}\\dock_file\\main.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}\\dock_file"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "編譯 OOP 專案的所有源文件"
+        }
+    ],
+    "version": "2.0.0"
+}

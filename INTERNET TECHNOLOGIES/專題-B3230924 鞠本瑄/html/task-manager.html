@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<!-- 存檔點 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工作列表管理器</title>
+    <!-- 完成品 -->
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- 原有的 CSS -->
+    <link rel="stylesheet" href="../css/task-manager.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- 標題區域 -->
+        <div class="header">
+            <h1>📋 工作列表管理器</h1>
+            <div class="upcoming-event" id="upcomingEvent">
+                <h3>🚀 即將到來的事件</h3>
+                <div class="event-info">
+                    <div>
+                        <div class="event-name" id="eventName">暫無即將到來的事件</div>
+                        <div class="event-date" id="eventDate"></div>
+                    </div>
+                    <div class="countdown" id="countdown">--</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 統計卡片區域 (調整間隔) -->
+        <div class="statistics-section">
+            <div class="row g-4 mb-5">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card bg-primary text-white h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-list-task fs-1 mb-2"></i>
+                            <h4 class="card-title" id="totalCount">0</h4>
+                            <p class="card-text mb-0">總任務數</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card bg-success text-white h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-clock fs-1 mb-2"></i>
+                            <h4 class="card-title" id="pendingCount">0</h4>
+                            <p class="card-text mb-0">進行中</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card bg-danger text-white h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-exclamation-triangle fs-1 mb-2"></i>
+                            <h4 class="card-title" id="expiredCount">0</h4>
+                            <p class="card-text mb-0">已過期</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card bg-warning text-white h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-calendar-event fs-1 mb-2"></i>
+                            <h4 class="card-title" id="urgentCount">0</h4>
+                            <p class="card-text mb-0">緊急任務</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 主要內容 -->
+        <div class="main-content">
+            <!-- 功能選單 -->
+            <div class="menu-bar">
+                <h2>📝 所有代辦事項</h2>
+                <div class="menu-buttons">
+                    <button class="btn" onclick="openAddModal()">➕ 新增事項</button>
+                    <button class="btn" onclick="clearAllTasks()">🗑️ 清空全部</button>
+                    <button class="btn" onclick="exportTasks()">📤 匯出資料</button>
+                    <button class="btn" onclick="document.getElementById('importFile').click()">📥 匯入資料</button>
+                    <input type="file" id="importFile" accept=".json" style="display: none;"
+                        onchange="importTasks(event)">
+                </div>
+            </div>
+
+            <!-- 任務列表 -->
+            <div class="task-list" id="taskList">
+                <!-- 任務項目將在這裡動態生成 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 新增任務的彈窗 -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>新增代辦事項</h2>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <form id="taskForm">
+                <div class="form-group">
+                    <label for="taskName">事件名稱：</label>
+                    <input type="text" id="taskName" required>
+                </div>
+                <div class="form-group">
+                    <label for="taskDate">日期：</label>
+                    <input type="datetime-local" id="taskDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="taskDetails">詳細說明：</label>
+                    <textarea id="taskDetails" placeholder="請輸入詳細說明..."></textarea>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-primary">✅ 確認新增</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">❌ 取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap 確認刪除 Modal - 優化版 -->
+    <div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-labelledby="deleteConfirmModalLabel"
+        aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-gradient-danger text-white border-0">
+                    <h5 class="modal-title fw-bold" id="deleteConfirmModalLabel">
+                        <i class="bi bi-exclamation-triangle-fill me-2 fs-4"></i>
+                        確認刪除任務
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-4">
+                    <div class="mb-4">
+                        <div class="delete-icon-container mb-3">
+                            <i class="bi bi-trash3-fill text-danger"></i>
+                        </div>
+                        <h6 class="fw-bold mb-3">您確定要刪除這個任務嗎？</h6>
+                        <div class="task-preview p-3 bg-light rounded-3 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-file-text text-primary me-2"></i>
+                                <span id="deleteTaskName" class="fw-semibold text-dark">任務名稱</span>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-0">
+                            <i class="bi bi-info-circle me-1"></i>
+                            此操作無法復原，請謹慎考慮
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 px-4 pb-4">
+                    <button type="button" class="btn btn-outline-secondary px-4" data-bs-dismiss="modal">
+                        <i class="bi bi-x-circle me-1"></i>取消
+                    </button>
+                    <button type="button" class="btn btn-danger px-4 ms-2" id="confirmDeleteBtn">
+                        <i class="bi bi-trash3 me-1"></i>確認刪除
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Toast 通知 -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="bi bi-bell-fill me-2 text-primary"></i>
+                <strong class="me-auto">系統通知</strong>
+                <small class="text-muted">剛剛</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body" id="toastMessage">
+                <!-- 通知訊息 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/task-manager.js"></script>
+</body>
+
+</html>

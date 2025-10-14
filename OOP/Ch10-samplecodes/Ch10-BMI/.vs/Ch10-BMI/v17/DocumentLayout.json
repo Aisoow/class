@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\autolab\\source\\repos\\Ch10-BMI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5531198A-D11F-42E1-8A99-1B082D72CED2}|Ch10-BMI.vcxproj|C:\\Users\\autolab\\source\\repos\\Ch10-BMI\\BMI.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5531198A-D11F-42E1-8A99-1B082D72CED2}|Ch10-BMI.vcxproj|solutionrelative:BMI.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5531198A-D11F-42E1-8A99-1B082D72CED2}|Ch10-BMI.vcxproj|C:\\Users\\autolab\\source\\repos\\Ch10-BMI\\BMI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5531198A-D11F-42E1-8A99-1B082D72CED2}|Ch10-BMI.vcxproj|solutionrelative:BMI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5531198A-D11F-42E1-8A99-1B082D72CED2}|Ch10-BMI.vcxproj|C:\\Users\\autolab\\source\\repos\\Ch10-BMI\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5531198A-D11F-42E1-8A99-1B082D72CED2}|Ch10-BMI.vcxproj|solutionrelative:Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Source.cpp",
+              "DocumentMoniker": "C:\\Users\\autolab\\source\\repos\\Ch10-BMI\\Source.cpp",
+              "RelativeDocumentMoniker": "Source.cpp",
+              "ToolTip": "C:\\Users\\autolab\\source\\repos\\Ch10-BMI\\Source.cpp",
+              "RelativeToolTip": "Source.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-16T19:48:26.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BMI.cpp",
+              "DocumentMoniker": "C:\\Users\\autolab\\source\\repos\\Ch10-BMI\\BMI.cpp",
+              "RelativeDocumentMoniker": "BMI.cpp",
+              "ToolTip": "C:\\Users\\autolab\\source\\repos\\Ch10-BMI\\BMI.cpp*",
+              "RelativeToolTip": "BMI.cpp*",
+              "ViewState": "AgIAACkAAACA//////8QwDgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-16T19:48:15.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BMI.h",
+              "DocumentMoniker": "C:\\Users\\autolab\\source\\repos\\Ch10-BMI\\BMI.h",
+              "RelativeDocumentMoniker": "BMI.h",
+              "ToolTip": "C:\\Users\\autolab\\source\\repos\\Ch10-BMI\\BMI.h*",
+              "RelativeToolTip": "BMI.h*",
+              "ViewState": "AgIAAAQAAABAMzMzM7MiwA0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-16T19:47:59.645Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

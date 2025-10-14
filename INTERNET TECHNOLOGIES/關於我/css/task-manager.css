@@ -1,0 +1,1094 @@
+/* 完成品 */
+/* 存檔點 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft JhengHei', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* 標題區域樣式 */
+.header {
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.upcoming-event {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.upcoming-event h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.event-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.event-name {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.event-date {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.countdown {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffeb3b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* 主要內容樣式 */
+.main-content {
+    padding: 30px;
+}
+
+.menu-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.menu-bar h2 {
+    color: #333;
+    font-size: 1.8em;
+}
+
+.menu-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #28a745, #20c997);
+}
+
+.btn-secondary {
+    background: linear-gradient(45deg, #6c757d, #495057);
+}
+
+/* 任務列表樣式 */
+.task-list {
+    display: grid;
+    gap: 15px;
+}
+
+.task-item {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #667eea;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.task-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.task-item.expired {
+    opacity: 0.7;
+    background-color: #f0f0f0;
+    /* 更明顯的灰底 */
+    border-left: 4px solid #6c757d;
+    /* 灰色邊框 */
+}
+
+.task-item.expired .task-name {
+    color: #6c757d;
+    /* 任務名稱變灰 */
+    /* 移除 text-decoration: line-through; */
+}
+
+.task-item.expired .task-date {
+    color: #6c757d;
+    /* 日期變灰 */
+}
+
+.task-item.expired .task-details {
+    color: #6c757d;
+    /* 詳細說明變灰 */
+    background-color: #e9ecef;
+    /* 詳細說明背景也變灰 */
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.task-name {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+}
+
+.task-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.task-date {
+    color: #666;
+    font-weight: 500;
+    background: #e9ecef;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.task-countdown {
+    color: #155724;
+    /* 深綠色文字 */
+    font-weight: bold;
+    background: #d4edda;
+    /* 淺綠色背景 */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.task-countdown.expired {
+    color: #721c24;
+    background: #f8d7da;
+}
+
+.task-countdown.soon {
+    color: #856404;
+    background: #fff3cd;
+}
+
+.task-details {
+    margin-top: 15px;
+    color: #555;
+    line-height: 1.6;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 3px solid #dee2e6;
+}
+
+.task-actions {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+    transform: scale(1.1);
+}
+
+/* 彈窗樣式 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 15px 15px 0 0;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.close {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    transition: opacity 0.3s ease;
+}
+
+.close:hover {
+    opacity: 0.7;
+}
+
+/* 表單樣式 */
+#taskForm {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+    line-height: 1.6;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+/* 空狀態樣式 */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+}
+
+.empty-state h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #999;
+}
+
+.empty-state p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* 調整統計區域樣式 */
+.statistics-section {
+    padding: 25px 30px;
+    /* 增加內邊距 */
+}
+
+/* 統計卡片動畫效果 */
+.statistics-section .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.statistics-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* 統計圖示動畫 */
+.statistics-section .card i {
+    transition: transform 0.3s ease;
+}
+
+.statistics-section .card:hover i {
+    transform: scale(1.1);
+}
+
+/* 優化 Bootstrap Modal 樣式 */
+.modal.fade {
+    z-index: 2000 !important;
+}
+
+.modal-backdrop {
+    z-index: 1999 !important;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#deleteConfirmModal {
+    z-index: 2100 !important;
+}
+
+#deleteConfirmModal .modal-content {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+#deleteConfirmModal .modal-header {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    border: none;
+    padding: 20px 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+#deleteConfirmModal .modal-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: modalShimmer 3s ease-in-out infinite;
+}
+
+@keyframes modalShimmer {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+}
+
+#deleteConfirmModal .modal-title {
+    position: relative;
+    z-index: 1;
+    font-size: 1.2em;
+}
+
+#deleteConfirmModal .btn-close {
+    position: relative;
+    z-index: 1;
+}
+
+/* 刪除圖示動畫 */
+.delete-icon-container {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #fff5f5, #fed7d7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.delete-icon-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 30%, rgba(220, 53, 69, 0.1) 50%, transparent 70%);
+    animation: iconSweep 2s ease-in-out infinite;
+}
+
+@keyframes iconSweep {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.delete-icon-container i {
+    font-size: 2.5rem;
+    color: #dc3545;
+    position: relative;
+    z-index: 1;
+    animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* 任務預覽樣式 */
+.task-preview {
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.task-preview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(220, 53, 69, 0.1), transparent);
+    animation: previewShine 3s ease-in-out infinite;
+}
+
+@keyframes previewShine {
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* 優化按鈕樣式 */
+#deleteConfirmModal .btn {
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 12px 24px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+#deleteConfirmModal .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+#deleteConfirmModal .btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+#deleteConfirmModal .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+#deleteConfirmModal .btn-danger:hover {
+    background: linear-gradient(135deg, #c82333, #a71e2a);
+}
+
+#deleteConfirmModal .btn-outline-secondary {
+    border: 2px solid #6c757d;
+    color: #6c757d;
+    background: transparent;
+}
+
+#deleteConfirmModal .btn-outline-secondary:hover {
+    background: #6c757d;
+    color: white;
+    border-color: #6c757d;
+}
+
+/* 優化 Toast 通知樣式 */
+.toast-container {
+    z-index: 2050 !important;
+}
+
+.toast {
+    z-index: 2051 !important;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: none;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.toast-header {
+    border-radius: 15px 15px 0 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.toast-body {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 0 0 15px 15px;
+    font-weight: 500;
+}
+
+/* 優化任務項目的刪除按鈕 */
+.task-actions .btn-outline-danger {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.task-actions .btn-outline-danger::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: #dc3545;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s, height 0.4s;
+    z-index: 0;
+}
+
+.task-actions .btn-outline-danger:hover::before {
+    width: 100px;
+    height: 100px;
+}
+
+.task-actions .btn-outline-danger:hover {
+    color: white;
+    border-color: #dc3545;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);
+}
+
+.task-actions .btn-outline-danger i {
+    position: relative;
+    z-index: 1;
+}
+
+/* 優化統計卡片懸停效果 */
+.statistics-section .card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.statistics-section .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.statistics-section .card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.statistics-section .card:hover::before {
+    opacity: 1;
+}
+
+.statistics-section .card-body {
+    position: relative;
+    z-index: 1;
+}
+
+.statistics-section .card i {
+    transition: all 0.4s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.statistics-section .card:hover i {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* 優化表單輸入框 */
+.form-group input,
+.form-group textarea {
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* 優化空狀態 */
+.empty-state {
+    background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+    border-radius: 20px;
+    border: 2px dashed #dee2e6;
+    transition: all 0.3s ease;
+}
+
+.empty-state:hover {
+    border-color: #667eea;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.1);
+}
+
+/* 優化按鈕組 */
+.btn-group .btn {
+    border-radius: 8px !important;
+    margin-right: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-group .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s, height 0.4s;
+}
+
+.btn-group .btn:hover::before {
+    width: 100px;
+    height: 100px;
+}
+
+.btn-group .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 任務按鈕組樣式 - 與新增事項按鈕保持一致 */
+.task-button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* 基礎任務按鈕樣式 - 繼承自 .btn */
+.task-complete-btn,
+.task-restore-btn,
+.task-delete-btn {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
+    white-space: nowrap;
+}
+
+/* 完成按鈕樣式 */
+.task-complete-btn {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    position: relative;
+    overflow: hidden;
+}
+
+.task-complete-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+.task-complete-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+    background: linear-gradient(45deg, #218838, #1e7e34);
+}
+
+.task-complete-btn:hover::before {
+    width: 100px;
+    height: 100px;
+}
+
+/* 恢復按鈕樣式 */
+.task-restore-btn {
+    background: linear-gradient(45deg, #ffc107, #e0a800);
+    color: #212529;
+}
+
+.task-restore-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+    background: linear-gradient(45deg, #e0a800, #d39e00);
+}
+
+/* 刪除按鈕樣式 */
+.task-delete-btn {
+    background: linear-gradient(45deg, #dc3545, #c82333);
+    position: relative;
+    overflow: hidden;
+}
+
+.task-delete-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+.task-delete-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);
+    background: linear-gradient(45deg, #c82333, #a71e2a);
+}
+
+.task-delete-btn:hover::before {
+    width: 100px;
+    height: 100px;
+}
+
+/* 按鈕點擊效果 */
+.task-complete-btn:active,
+.task-restore-btn:active,
+.task-delete-btn:active {
+    transform: translateY(0) scale(0.98);
+    transition: transform 0.1s ease;
+}
+
+/* 完成狀態的任務按鈕調整 */
+.task-item.completed .task-button-group .btn {
+    opacity: 0.8;
+}
+
+.task-item.completed .task-restore-btn {
+    opacity: 1;
+    background: linear-gradient(45deg, #f0ad4e, #ec971f);
+    color: white;
+}
+
+.task-item.completed .task-restore-btn:hover {
+    background: linear-gradient(45deg, #ec971f, #d58512);
+    box-shadow: 0 4px 15px rgba(240, 173, 78, 0.4);
+}
+
+/* 過期任務的按鈕樣式 */
+.task-item.expired .task-button-group .btn {
+    opacity: 0.7;
+    filter: grayscale(0.3);
+}
+
+.task-item.expired .task-delete-btn {
+    opacity: 0.9;
+    filter: grayscale(0);
+}
+
+.task-item.expired .task-complete-btn {
+    background: linear-gradient(45deg, #6c757d, #495057);
+}
+
+.task-item.expired .task-complete-btn:hover {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+/* 緊急任務的特殊效果 */
+.task-item .task-countdown.soon ~ .task-actions .task-complete-btn {
+    animation: urgentPulse 2s ease-in-out infinite;
+    position: relative;
+}
+
+@keyframes urgentPulse {
+    0%, 100% { 
+        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+    }
+    50% { 
+        box-shadow: 0 4px 15px rgba(255, 193, 7, 0.8), 0 0 20px rgba(255, 193, 7, 0.4);
+    }
+}
+
+/* 按鈕加載狀態 */
+.task-button-group .btn.loading {
+    pointer-events: none;
+    opacity: 0.6;
+    position: relative;
+}
+
+.task-button-group .btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: buttonSpin 1s linear infinite;
+}
+
+@keyframes buttonSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    #deleteConfirmModal .modal-dialog {
+        margin: 20px;
+    }
+
+    #deleteConfirmModal .modal-content {
+        border-radius: 15px;
+    }
+
+    .delete-icon-container {
+        width: 60px;
+        height: 60px;
+    }
+
+    .delete-icon-container i {
+        font-size: 2rem;
+    }
+
+    #deleteConfirmModal .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .task-button-group {
+        justify-content: center;
+        width: 100%;
+        gap: 8px;
+        margin-top: 15px;
+    }
+    
+    .task-complete-btn,
+    .task-restore-btn,
+    .task-delete-btn {
+        min-width: 80px;
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .task-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .task-actions {
+        position: static;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .task-button-group {
+        gap: 8px;
+    }
+    
+    .task-complete-btn,
+    .task-restore-btn,
+    .task-delete-btn {
+        width: 45%;
+        min-width: auto;
+        justify-content: center;
+    }
+}
+
+/* 按鈕文字選擇禁用 */
+.task-button-group .btn {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* 按鈕懸停時的文字效果 */
+.task-button-group .btn:hover {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* 刪除按鈕的特殊震動效果 */
+.task-delete-btn:hover {
+    animation: deleteButtonShake 0.3s ease-in-out;
+}
+
+@keyframes deleteButtonShake {
+    0%, 100% { transform: translateY(-2px) rotate(0deg); }
+    25% { transform: translateY(-2px) rotate(-1deg); }
+    75% { transform: translateY(-2px) rotate(1deg); }
+}
+
+/* 調整任務操作區域 */
+.task-actions {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex: 0 0 auto;
+    margin-left: auto;
+}
+
+/* 確保任務標題不會被按鈕遮擋 */
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.task-name {
+    flex: 1;
+    min-width: 0;
+    margin-right: 15px;
+}

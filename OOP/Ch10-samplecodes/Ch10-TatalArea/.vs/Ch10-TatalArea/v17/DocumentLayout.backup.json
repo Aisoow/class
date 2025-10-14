@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\autolab\\source\\repos\\Ch10-TatalArea\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9FFFEAAC-BFB7-46FD-911F-A5B8F9708CA5}|Ch10-TatalArea.vcxproj|C:\\Users\\autolab\\source\\repos\\Ch10-TatalArea\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9FFFEAAC-BFB7-46FD-911F-A5B8F9708CA5}|Ch10-TatalArea.vcxproj|solutionrelative:Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FFFEAAC-BFB7-46FD-911F-A5B8F9708CA5}|Ch10-TatalArea.vcxproj|C:\\Users\\autolab\\source\\repos\\Ch10-TatalArea\\CircleWithPrivateDataFields.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9FFFEAAC-BFB7-46FD-911F-A5B8F9708CA5}|Ch10-TatalArea.vcxproj|solutionrelative:CircleWithPrivateDataFields.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FFFEAAC-BFB7-46FD-911F-A5B8F9708CA5}|Ch10-TatalArea.vcxproj|C:\\Users\\autolab\\source\\repos\\Ch10-TatalArea\\CircleWithPrivateDataFields.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9FFFEAAC-BFB7-46FD-911F-A5B8F9708CA5}|Ch10-TatalArea.vcxproj|solutionrelative:CircleWithPrivateDataFields.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Source.cpp",
+              "DocumentMoniker": "C:\\Users\\autolab\\source\\repos\\Ch10-TatalArea\\Source.cpp",
+              "RelativeDocumentMoniker": "Source.cpp",
+              "ToolTip": "C:\\Users\\autolab\\source\\repos\\Ch10-TatalArea\\Source.cpp*",
+              "RelativeToolTip": "Source.cpp*",
+              "ViewState": "AgIAABYAAACAMjMzMzMLwCMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-16T18:03:14.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CircleWithPrivateDataFields.cpp",
+              "DocumentMoniker": "C:\\Users\\autolab\\source\\repos\\Ch10-TatalArea\\CircleWithPrivateDataFields.cpp",
+              "RelativeDocumentMoniker": "CircleWithPrivateDataFields.cpp",
+              "ToolTip": "C:\\Users\\autolab\\source\\repos\\Ch10-TatalArea\\CircleWithPrivateDataFields.cpp",
+              "RelativeToolTip": "CircleWithPrivateDataFields.cpp",
+              "ViewState": "AgIAAAEAAAAcmZmZmZkewAUAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-16T18:03:05.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CircleWithPrivateDataFields.h",
+              "DocumentMoniker": "C:\\Users\\autolab\\source\\repos\\Ch10-TatalArea\\CircleWithPrivateDataFields.h",
+              "RelativeDocumentMoniker": "CircleWithPrivateDataFields.h",
+              "ToolTip": "C:\\Users\\autolab\\source\\repos\\Ch10-TatalArea\\CircleWithPrivateDataFields.h",
+              "RelativeToolTip": "CircleWithPrivateDataFields.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-16T18:02:54.39Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

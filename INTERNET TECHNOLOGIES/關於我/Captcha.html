@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Captcha測試</title>
+</head>
+
+<body onload="Captcha()">
+  <script>
+    let currentNum = ""; // 存儲當前驗證碼
+    function Captcha() {
+      let picname = new Array()
+      picname[0] = "image/0.png";
+      picname[1] = "image/1.png";
+      picname[2] = "image/2.png";
+      picname[3] = "image/3.png";
+      picname[4] = "image/4.png";
+      picname[5] = "image/5.png";
+      picname[6] = "image/6.png";
+      picname[7] = "image/7.png";
+      picname[8] = "image/8.png";
+      picname[9] = "image/9.png";
+
+
+
+      for (let i = 0; i < 4; i++) {
+        let which = Math.floor(Math.random() * 10);
+        currentNum += which;
+        document.getElementById("random_pic-" + i).src = picname[which];
+      }
+
+    }
+
+    function chkcod() {
+      const text = document.getElementById("txt").value;
+      if (currentNum == text) {
+        alert("驗證正確")
+        window.location.href = "html/mainpage.html"
+      }
+
+      else {
+        alert("驗證錯誤")
+      }
+    }
+  </script>
+
+  <h3>圖片:
+    <img id="random_pic-0" width="50px">
+    <img id="random_pic-1" width="50px">
+    <img id="random_pic-2" width="50px">
+    <img id="random_pic-3" width="50px">
+  </h3>
+  <input type="text" name="驗證碼輸入" id="txt" placeholder="請輸入驗證碼">
+  <input type="button" value="驗證" onclick="chkcod()">
+</body>
+
+</html>
