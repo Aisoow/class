@@ -22,7 +22,7 @@ void matrix_mul(int a[][columns], int b[][columns], int c[][columns])
             int n = 0;
             for (int x = 0; x < columns; x++)
             {
-                n += a[j][x] * b[x][j];
+                n += a[i][x] * b[x][j];
             }
             c[i][j] = n;
         }
