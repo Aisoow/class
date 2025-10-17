@@ -16,6 +16,7 @@ void compress_process(int a[][a_columns], int b[][b_columns])
 {
     int c = 0;
     int n = 1;
+
     for (int i = 0; i < a_rows; i++)
         for (int j = 0; j < a_columns; j++)
             if (a[i][j] != 0)
