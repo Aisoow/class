@@ -1,0 +1,93 @@
+/* 程式範例: Ch12_1_2.java */
+class Person {  // Person類別宣告
+    private int id;         // 身份字號
+    private String name;    // 姓名
+    private double height;  // 身高
+    // 成員方法: 設定身份字號
+    public void setID(int id) { this.id = id; }
+    // 成員方法: 設定姓名
+    public void setName(String n) { name = n; }
+    // 成員方法: 設定身高
+    public void setHeight(double h) { height = h; }
+    // 成員方法: 顯示個人資料
+    public void personInfo() {
+        System.out.println("字號: " + id);
+        System.out.println("姓名: " + name);
+        System.out.println("身高: " + height);
+    }
+}
+
+class Student extends Person { // Student類別宣告
+    private int score; // 成績
+    // 建構子
+
+    public Student(int id, String n, double h, int score) {
+        setID(id); // 呼叫父類別的成員方法
+        setName(n);
+        setHeight(h);
+        this.score = score;
+    }
+
+    // 成員方法: 顯示學生資料
+    public void studentInfo() {
+        System.out.println("[學生資料]=====");
+        personInfo(); // 呼叫父類別的成員方法
+        System.out.println("成績: " + score);
+    }
+}
+
+class Salesperson extends Person {
+    private double revenue;
+
+    public Salesperson(int id, String n, double h, double revenue) {
+        setID(id);
+        setName(n);
+        setHeight(h);
+        this.revenue = revenue;
+    }
+
+    public void SalespersonInfo() {
+        System.out.println("[銷售員資料]====="); 
+        personInfo();
+        System.out.println("業績: " + revenue);
+    }
+}
+
+class Teacher extends Person
+{
+    private int student_number;
+
+    public Teacher(int id ,String n, double h, int student_number)
+    {
+        setID(id);
+        setName(n);
+        setHeight(h);
+        this.student_number = student_number;
+    }
+
+    public void TeacherInfo()
+    {
+        System.out.println("[導師資料]=====");
+        personInfo();
+        System.out.println("學生人數: " + student_number);
+    }
+}
+// 主程式類別
+public class pr2 {
+    // 主程式
+    public static void main(String[] args) {
+        // 宣告Student類別型態的變數, 並且建立物件
+        Student joe = new Student(1234,"陳會安",175.0,85);
+        Student jane = new Student(3456, "江小魚", 150.0, 65);
+        Teacher chen = new Teacher(1234,"陳健安",175.0,200);			
+		Salesperson jiang = new Salesperson(3456,"江小魚",150.0, 3000000.0);			
+			
+        // 更改身高 - 呼叫繼承的方法
+        jane.setHeight(158.0);
+        // 顯示學生資料
+        joe.studentInfo();
+        jane.studentInfo();
+        chen.TeacherInfo();			
+		jiang.SalespersonInfo();
+    }
+}
