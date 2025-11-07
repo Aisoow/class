@@ -132,8 +132,8 @@ body {
 .info-table {
     border: 1px solid #ddd;
     border-collapse: collapse;
-    width: 80%;
-    max-width: 900px;
+    width: 95%;
+    max-width: 1200px;
     background-color: #e3f2fd;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -141,8 +141,9 @@ body {
 }
 
 .info-table td {
-    padding: 12px 15px;
+    padding: 18px 20px;
     border: 1px solid #ddd;
+    font-size: 16px;
 }
 
 .info-table .label-cell {
@@ -159,7 +160,7 @@ body {
 }
 
 .info-table .photo-cell img {
-    max-width: 150px;
+    max-width: 200px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
