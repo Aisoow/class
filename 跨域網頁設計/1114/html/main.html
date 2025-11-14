@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1114課堂練習</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/main.js"></script>
+</head>
+
+<body>
+    <h1>1114課堂練習</h1>
+    <h2>表單練習</h2>
+    <form action="https://www.pccu.edu.tw/" method="get">
+        <h3>
+            <label class="title">請輸入會員資料</label>
+        </h3>
+        <p>
+            <label class="typein">姓名：</label><input type="text" name="name" id="name" size="20" autofocus><br>
+            <label class="typein">密碼：</label><input type="password" name="pwd" id="pwd" required><br>
+            <label class="typein">地址：</label><input type="text" name="addr" id="addr"><br>
+            <label class="typein">電話：</label><input type="tel" name="phone" id="phone" placeholder="0912345678"><br>
+            <label class="typein">e-mail：</label><input type="email" name="email" id="email"
+                placeholder="example@example.com"><br>
+            <label class="typein">生日：</label><input type="date" name="birthday" id="birthday"><br>
+        </p>
+        <p>
+            <label class="title">性別：</label><br>
+            <input type="radio" name="sex" value="1">男
+            <input type="radio" name="sex" value="2" checked>女
+            <br>
+        </p>
+        <p>
+            <label class="title">年齡層：</label><br>
+            <input type="radio" name="age" id="age1" value="20">小於20歲
+            <input type="radio" name="age" id="age2" value="20-40">20到40歲
+            <input type="radio" name="age" id="age3" value="41-60">41到60歲
+            <input type="radio" name="age" id="age4" value="61+">61歲以上
+        </p>
+        <p>
+            <label class="title">電腦能力：</label><br>
+            <input type="checkbox" name="skill" id="html" value="html">
+            <label for="html" class="skill">html</label>
+            <input type="checkbox" name="skill" id="css" value="css"><label for="css" class="skill">css</label>
+            <input type="checkbox" name="skill" id="javascript" value="javascript"><label for="javascript"
+                class="skill">JavaScript</label>
+        </p>
+        <p>
+            <label class="title" for="color">喜歡的顏色：</label><br>
+            顏色1：<input type="color" name="color1" id="color1" value="#ff0000"><br>
+            顏色2：<input type="color" name="color2" id="color2" value="#00ff00"><br>
+            顏色3：<input type="color" name="color3" id="color3" value="#0000ff"><br>
+        </p>
+        <p>
+            <input type="submit" value="送出">
+            <input type="reset" value="取消"><br>
+            <input type="image" src="../image/meow-im-dancing.gif" alt="提交" width="100px"><br>
+        </p>
+    </form>
+</body>
+
+</html>
