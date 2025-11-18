@@ -1,0 +1,32 @@
+/* 跟隨滑鼠的提示框 */
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    pointer-events: none;
+    /* 讓滑鼠可以穿透彈窗 */
+}
+
+/* 彈窗內容容器 */
+.modal-content {
+    background-color: white;
+    padding: 15px 20px;
+    border: 2px solid #888;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 250px;
+    font-size: 14px;
+}
+
+/* 標題樣式 */
+.modal-content h2 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+/* 文字樣式 */
+.modal-content p {
+    margin: 0;
+    color: #666;
+}

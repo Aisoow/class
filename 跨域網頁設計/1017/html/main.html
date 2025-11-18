@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣旅遊導覽網頁</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <h1>台灣旅遊導覽網頁</h1>
+    <p>
+        <img src="../image/map.jpg" usemap="#taiwan" alt="台灣地圖" width="500px">
+        <map name="taiwan">
+            <area target="_top" alt="大台北" title="大台北" href="taipai and new taipai.html"
+                coords="377,107,378,114,382,121,388,120,395,114,394,104,402,102,411,97,419,93,424,85,430,85,432,77,444,72,454,72,460,71,451,70,445,63,445,57,439,57,432,56,426,54,420,54,414,50,406,45,402,41,393,36,383,37,374,40,367,54,354,65,365,69,362,82,357,89,359,95,363,101,364,100,371,102"
+                shape="poly" onmouseover="showModal('大台北', '歡迎來到大台北!這是台北+新北組成的大都會')" onmouseout="closeModal()">
+            <area target="_blank" alt="宜蘭" title="宜蘭" href="https://zh.wikipedia.org/zh-tw/%E5%AE%9C%E8%98%AD%E7%B8%A3"
+                coords="447,75,437,79,435,86,427,89,424,95,418,96,412,100,404,103,399,106,399,115,390,123,382,133,376,136,372,142,362,158,368,167,378,166,385,167,396,170,403,169,408,166,414,166,423,169,430,167,438,152,441,140,440,130,437,124,436,116,435,105,434,97"
+                shape="poly" onmouseover="showModal('宜蘭', '歡迎來到宜蘭!這裡有太平山、龜山島等美景。')" onmouseout="closeModal()">
+            <area target="_blank" alt="花蓮" title="花蓮" href="https://zh.wikipedia.org/wiki/%E8%8A%B1%E8%93%AE%E7%B8%A3"
+                coords="426,172,416,171,408,169,405,174,399,175,389,175,383,173,375,177,368,187,366,194,359,194,362,199,365,204,360,208,360,215,359,227,356,235,350,250,353,256,354,269,351,275,344,280,338,288,330,291,328,299,326,305,321,307,329,318,335,328,341,329,349,330,355,336,362,341,369,342,372,332,373,322,374,313,380,306,385,298,391,293,395,294,398,258,402,235,408,223,408,211,406,201,413,189,417,181"
+                shape="poly" onmouseover="showModal('花蓮', '歡迎來到花蓮!這裡有太魯閣、七星潭等自然景觀。')" onmouseout="closeModal()">
+        </map>
+    </p>
+
+    <!-- 彈窗 -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h2 id="modalTitle"></h2>
+            <p id="modalText"></p>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
