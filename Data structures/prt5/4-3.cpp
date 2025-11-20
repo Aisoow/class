@@ -39,12 +39,18 @@ void Queue::BackDequeue()
 }
 void Queue::PrintQueue()
 {
+    for (int i = (front + 1) % 10; i != rear; i = (i + 1) % 10)
+    {
+        cout << arr[i] << " ";
+    }
+    /*
     int i = front;
     while (i != rear)
     {
         i = (i + 1) % 10;
         cout << arr[i] << " ";
     }
+    */
     cout << " rear:" << rear << " front:" << front;
 }
 int main(int argc, char *argv[])
